@@ -16,4 +16,10 @@ public class UserController {
     public String sayHello(User user){
         return user.toString();
     }
+
+
+    @RequestMapping("/login")
+    public String login(User user){
+        return user.toString();
+    }
 }
