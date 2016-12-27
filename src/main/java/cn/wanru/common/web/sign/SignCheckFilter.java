@@ -43,6 +43,7 @@ public class SignCheckFilter implements Filter {
     }
 
     private void doSignError(ServletRequest request, ServletResponse response) throws ServletException, IOException {
+        response.setContentType("text/json;charset=UTF-8");
         response.getWriter().print("签名不通过");
     }
 }

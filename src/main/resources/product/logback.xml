@@ -19,7 +19,7 @@
         <appender-ref ref="DEBUG" />
     </logger>
 
-    <root level="INFO">
+    <root level="info">
         <appender-ref ref="STDOUT" />
     </root>
 
