@@ -18,7 +18,7 @@ import java.util.TreeSet;
  * @since 12/26/16
  */
 final class SignUtils {
-    private static final String ALGORITHM = "RSA";
+    private static final String ALGORITHM = "SHA1withRSA";
     private static final String CHARSET = "UTF-8";
 
     private SignProperties properties;
@@ -32,7 +32,7 @@ final class SignUtils {
 
     private void init(){
         try {
-            KeyFactory keyFactory = KeyFactory.getInstance(ALGORITHM);
+            KeyFactory keyFactory = KeyFactory.getInstance("RSA");
             byte[] bytes = Base64.getDecoder().decode(properties.getPublicKey());
             KeySpec publicKeySpec = new X509EncodedKeySpec(bytes);
             publicKey = keyFactory.generatePublic(publicKeySpec);
